@@ -8,14 +8,16 @@ interface StoryBoxType {
 
 export function StoryBox({ time, children }: StoryBoxType) {
   return (
-    <div className="flex items-center justify-center text-white max-w-3xl relative">
-      <div className="flex flex-col items-end">
+    <>
+      <div className="flex flex-col text-white">
         <p className='text-xs'>ano</p>
         <p className='text-lg'>{time}</p>
       </div>
-      <div className='mx-4 bg-black p-8 rounded-md font-light text-sm'>
-        {children}
+      <div className="flex items-center list-none text-white max-w-2xl">
+        <div className='bg-black p-8 rounded-md font-light text-sm'>
+          {children}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
